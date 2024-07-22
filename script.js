@@ -9,7 +9,7 @@ const filterGoods = (filterClass) => {
     }
   });
 };
-
+//s
 document.querySelector('nav').addEventListener('click', (event) => {
   if (event.target.tagName !== 'LI') return;
   let filterClass = event.target.dataset['f'];
