@@ -72,3 +72,8 @@ nav ul li:hover {
 .hide {
   display: none;
 }
+
+.active {
+  background: #fff;
+  color: #2e2e2e;
+}
