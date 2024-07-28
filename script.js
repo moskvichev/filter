@@ -25,3 +25,4 @@ if (window.location.hash) {
   console.log(window.location.hash);
   filterGoods(window.location.hash.slice(1));
 }
+//1
