@@ -52,3 +52,23 @@ checkbox.removeAttribute('checked');
 
 const button = document.querySelector('.add-button');
 console.log(button.dataset.article);
+
+const p2 = document.createElement('p');
+p2.textContent = 'hello world';
+p2.classList.add('bg-orange');
+p2.setAttribute('data-p2', 22);
+
+button.prepend(p2);
+
+imgGoods.alt = 'hello';
+
+p2.after(imgGoods);
+
+const input = document.createElement('input');
+input.setAttribute('type', 'text');
+imgGoods.before(input);
+input.oninput = func1;
+
+function func1() {
+  console.log(input.value);
+}
