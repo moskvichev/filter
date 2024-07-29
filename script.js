@@ -26,3 +26,29 @@ if (window.location.hash) {
   filterGoods(window.location.hash.slice(1));
 }
 //1
+const p1 = document.querySelector('.p-1');
+console.log(p1.innerHTML);
+console.log(p1.getAttribute('name'));
+console.log(document.querySelector('html').getAttribute('lang'));
+
+const imgGoods = document.querySelector('.img');
+imgGoods.style.width = '50px';
+imgGoods.style.height = '50px';
+
+console.log(imgGoods.getAttribute('src'));
+
+//2. Изменение атрибутов
+
+imgGoods.src = './images/ntop-4-gaming-laptops-under-1000-for-2015.jpg';
+imgGoods.setAttribute('name', 'tovar1');
+console.log(imgGoods.name);
+
+p1.id = 'two';
+console.log(p1.id);
+
+const checkbox = document.querySelector('.checkbox');
+checkbox.setAttribute('checked', true);
+checkbox.removeAttribute('checked');
+
+const button = document.querySelector('.add-button');
+console.log(button.dataset.article);
