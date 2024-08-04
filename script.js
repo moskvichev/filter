@@ -109,3 +109,62 @@ const t05 = () => console.log('focus');
 inputPsw.addEventListener('copy', t04);
 inputPsw.addEventListener('focus', t05);
 //d
+// цикл for
+// let massive = [1, 2, 3, 4, 5, 6];
+
+// for (let i = 0; i <= massive.length; i++) {
+//   console.log(i);
+// }
+
+let result = 1;
+let massive1 = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i <= massive1.length; i++) {
+//   result = result * massive1[i];
+//   console.log(result);
+// }
+
+for (let i = 0; i <= massive1.length; i++) {
+  let result1 = i * massive1[i];
+  console.log(result1);
+}
+
+// Дан объект obj с ключами 'Минск', 'Москва', 'Киев' с элементами 'Беларусь',
+// 'Россия', 'Украина'. С помощью цикла for-in выведите на экран строки такого
+// формата: 'Минск - это Беларусь.'.
+
+let obj = {
+  Минск: 'Беларусь',
+  Москва: 'Россия',
+  Киев: 'Украина',
+};
+
+for (let key in obj) {
+  console.log(key + ' это страна ' + obj[key]);
+}
+
+for (let i = 0; i < 10; i++) {
+  if (i % 2 == 0) console.log(i);
+}
+
+const elems = document.querySelectorAll('.elems>p');
+console.log(elems);
+const elemsFor = ['one', 'two', 'three'];
+
+for (let i = 0; i < elems.length; i++) {
+  elems[i].textContent += ' ' + elemsFor[i];
+}
+
+const r1 = document.getElementsByName('r-1');
+console.log(r1);
+
+let radio = () => {
+  for (let i = 0; i < r1.length; i++) {
+    if (r1[i].checked) {
+      console.log(r1[i].value);
+      break;
+    }
+  }
+};
+
+document.querySelector('.b-1').onclick = radio;
