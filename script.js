@@ -168,3 +168,23 @@ let radio = () => {
 };
 
 document.querySelector('.b-1').onclick = radio;
+
+//spcell
+const elements = document.querySelectorAll('.spcell');
+elements.forEach((item) => {
+  const changeTime = +item.getAttribute('time');
+  let n = +item.textContent;
+  const max = +item.getAttribute('max');
+
+  const interval = setInterval(function () {
+    if (max > n) {
+      n++;
+      item.textContent = n;
+      if (n >= max) clearInterval(interval);
+    } else {
+      n--;
+      item.textContent = n;
+      if (n <= max) clearInterval(interval);
+    }
+  }, Math.ceil(changeTime / Math.max(max, n)));
+});
