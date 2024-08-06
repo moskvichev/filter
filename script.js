@@ -169,7 +169,7 @@ let radio = () => {
 
 document.querySelector('.b-1').onclick = radio;
 
-//spcell
+//spcell счетчик
 const elements = document.querySelectorAll('.spcell');
 elements.forEach((item) => {
   const changeTime = +item.getAttribute('time');
